@@ -1,0 +1,56 @@
+.temperatura {
+  display: flex;
+  flex-direction: column;
+  width: 30vmin;
+  height: 15vmin;
+  box-shadow: 0px .5vmin 2vmin #818181;
+  border-radius: 2vmin;
+  background: linear-gradient(0.4turn, #00ffee, #33ff00);
+}
+
+.temperatura-nome {
+  width: 100%;
+  height: 25%;
+  color: #fff;
+  font-size: 2.5vmin;
+  font-weight: 600;
+  padding: 2.5% 0 2.5% 8%;
+  text-align: left;
+}
+
+.temperatura-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 75%;
+  color: #fff;
+  font-size: 5vmin;
+  font-weight: 400;
+  justify-content: space-around;
+}
+
+.temperatura-icone {
+  display: inline-block;
+  width: 25%;
+  margin-left: 5%;
+  height: auto;
+}
+
+.temperatura-dados {
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  font-size: .8em;
+}
+
+.temperatura-dados-carregando {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  font-size: .5em;
+  padding: 0 3% 0 0;
+}
