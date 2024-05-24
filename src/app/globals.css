@@ -1,33 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100min;
+  background-color: #F5F5F5;
+  color: #000;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.titulo-dispositivo, .titulo-ambiente {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmin;
+  font-weight: 600;
+  color: #555555;
+  margin: 20px 0;
+}
+
+.titulo-ambiente {
+  font-size: 2vmin;
+}
+
+.titulo-ambiente::before {
+  content: '•';
+  color: rgb(168, 16, 117);
+  margin-right: 10px;
+}
+
+.section-sensores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  width: 100%;
+  height: auto;
+  margin: 5% 0 0 0;
+}
+
+.section-sensores > :nth-child(1) {
+  justify-self: end;
+}
+
+.section-sensores > :nth-child(2) {
+  justify-self: start;
+}
+
+.section-ambientes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin: 5% 0 10% 0;
+}
+
+.section-terreo,
+.section-1andar,
+.section-terraco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  flex-direction: column;
+  border: #555555 1px solid;
+  border-radius:calc(50vw * 0.05);
+}
+
+.section-terraco {
+  grid-template-columns: 2fr;
+  justify-items: center;
 }
