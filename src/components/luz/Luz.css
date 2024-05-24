@@ -1,0 +1,145 @@
+.luz {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+.btnLuz {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 15vmin;
+  height: 15vmin;
+  box-shadow: 0px .5vmin 2vmin #818181;
+  border-radius: 2vmin;
+  margin: 10px;
+}
+
+.btnLuz-indisponivel:hover {
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+.btnLuz-display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.btnLuz-nome {
+  width: 100%;
+  height: 33.3%;
+  font-size: 1.6vmin;
+  font-weight: 600;
+  padding: 10% 10% 0 10%;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.btnLuz-icone {
+  width: 30%;
+  height: auto;
+  margin: 10% 0 0 10%;
+  padding: 5% 6%;
+  border-radius: 100%;
+}
+
+.btnDeslizante {
+  display: flex;
+  height: 33.3%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.retangulo {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 62%;
+  margin: 0 10% 10% 0;
+  border-radius: calc(50vw * 0.05);
+  position: relative;
+  transition: 1s all;
+}
+
+.circulo {
+  width: 1.8vmin;
+  height: 1.8vmin;
+  border-radius:calc(50vw * 0.05);
+  position: absolute;
+  transition: .5s all;
+}
+
+.btnLuz-on {
+  background: linear-gradient(0.4turn, #33394D, #484B65);
+  color: #ffffff;
+  transition: all 1s;
+}
+
+.btnLuz-on .btnLuz-icone {
+  background-color: #2E2E2E;
+}
+
+.btnLuz-on .retangulo {
+  border: #FF8A00 solid 1px;
+  justify-content: right;
+}
+
+.btnLuz-on .retangulo .circulo{
+  background-color: #FF8A00;
+  left: calc(100% - 2vmin);
+}
+
+.btnLuz-off {
+  background: #E4E3E3;
+  color: #000000;
+  transition: all 1s;
+}
+
+.btnLuz-off .btnLuz-icone {
+  background-color: #DADADA;
+}
+
+.btnLuz-off .retangulo {
+  background-color: #000000;
+  border: #000000 solid 1px;
+  justify-content: left;
+}
+
+.btnLuz-off .retangulo .circulo{
+  background-color: #ffffff;
+  left: 2px;
+}
+
+.btnLuz-on .iconeIndisponivel, .btnLuz-off .iconeIndisponivel {
+  display: none;
+}
+
+.btnLuz-indisponivel .btnDeslizante {
+  display: none;
+}
+
+.btnLuz-indisponivel {
+  background: linear-gradient(0.4turn, #ffffff, #ff0000);
+  color: #ffffff;
+}
+
+.btnLuz-indisponivel .iconeIndisponivel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btnLuz-indisponivel .btnLuz-icone {
+  background-color: #fa9e9e;
+}
+
+.iconeIndisponivel .btnLuz-icone{
+  background-color: #ff0000;
+  width: 15%;
+  height: auto;
+  margin: 0 10% 10% 0;
+  padding: 1%;
+}
