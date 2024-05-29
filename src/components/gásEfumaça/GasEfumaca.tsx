@@ -46,7 +46,7 @@ const GasEfumaca = () => {
     };
 
     fetchGasEfumaca();
-    const interval = setInterval(fetchGasEfumaca, 500);
+    const interval = setInterval(fetchGasEfumaca, 1000);
 
     return () => {
       clearInterval(interval);
