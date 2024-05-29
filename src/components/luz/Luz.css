@@ -38,6 +38,18 @@
   word-wrap: break-word;
 }
 
+.btnLuz-ambiente {
+  width: 100%;
+  height: 33.3%;
+  font-size: 1.6vmin;
+  font-weight: 600;
+  padding: 10% 10% 0 10%;
+  text-align: left;
+  word-wrap: break-word;
+  display: none;
+}
+
+
 .btnLuz-icone {
   width: 30%;
   height: auto;
