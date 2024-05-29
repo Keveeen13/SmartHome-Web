@@ -3,11 +3,12 @@ import Image from "next/image";
 import Luz from "../components/luz/Luz";
 import Temperatura from "../components/temperatura/Temperatura";
 import Umidade from "../components/umidade/Umidade";
+import GasEfumaca from "@/components/gásEfumaça/GasEfumaca";
 
 const Home = () => {
   return (
     <div className="container">
-      
+
       {/* <Image className="logo-site"
         src="/logo/SmartHome - Logo.png"
         alt="Logo SmartHome"
@@ -23,7 +24,7 @@ const Home = () => {
 
       <div className="section-ambientes">
 
-        <div>
+      <div>
           <h2 className="titulo-ambiente">Térreo</h2>
           <div className="section-terreo">
             <Luz dispositivo={"luz-cantina"} alias={"Cantina"} />
@@ -60,6 +61,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <GasEfumaca />
     </div>
   );
 };
