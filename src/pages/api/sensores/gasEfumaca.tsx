@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   try {
 
     const results = await query(
-      'SELECT * FROM sensores WHERE sensor = ? ORDER BY n DESC',
+      'SELECT valor FROM sensores WHERE sensor = ? AND data_hora >= NOW() - INTERVAL 5 SECOND ORDER BY n DESC;',
       ['Gás e Fumaça']
     );
     // Retorna os resultados como JSON
