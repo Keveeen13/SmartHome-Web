@@ -39,29 +39,24 @@ html, body {
   content: '•';
   color: rgb(168, 16, 117);
   margin-right: 10px;
+  font-size: x-large;
 }
 
 .section-sensores {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 5%;
   width: 100%;
   height: auto;
-  margin: 5% 0 0 0;
-}
-
-.section-sensores > :nth-child(1) {
-  justify-self: end;
-}
-
-.section-sensores > :nth-child(2) {
-  justify-self: start;
+  padding: 5% 5% 0 5%;
+  justify-content: center;
 }
 
 .section-ambientes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
   margin: 5% 0 10% 0;
 }
 
@@ -73,7 +68,7 @@ html, body {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   flex-direction: column;
   border: #555555 1px solid;
-  border-radius:calc(50vw * 0.05);
+  border-radius: 3vmin;
 }
 
 .section-terraco {
