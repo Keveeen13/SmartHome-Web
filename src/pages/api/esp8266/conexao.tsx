@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const insertSql = 'INSERT INTO sensores (sensor, valor) VALUES (?, ?)';
         await query(insertSql, [sensor, valor]);
         console.log('Dados inseridos com sucesso!');
-        res.status(200).json({ message: 'Dados inseridos com sucesso!' });
+        res.status(200).json({ [sensor]: 'Ok' });
       } catch (err) {
         console.error('Erro ao inserir dados:', err);
         res.status(500).json({ error: 'Erro ao inserir dados' });
