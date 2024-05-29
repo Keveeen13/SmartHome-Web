@@ -19,7 +19,7 @@ const Umidade = () => {
 
   useEffect(() => {
     fetchUmidade();
-    const interval = setInterval(fetchUmidade, 5000);
+    const interval = setInterval(fetchUmidade, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -38,7 +38,7 @@ const Umidade = () => {
         />
 
         {valor !== null ? (
-          <span className="umidade-dados">{valor}</span>
+          <span className="umidade-dados">{valor}<span className="umidade-unidadeDeMedida">%</span></span>
         ) : (
           <span className="umidade-dados-carregando">Carregando...</span>
         )}

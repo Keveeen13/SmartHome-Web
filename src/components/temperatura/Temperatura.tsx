@@ -19,7 +19,7 @@ const Temperatura = () => {
 
   useEffect(() => {
     fetchTemperatura();
-    const interval = setInterval(fetchTemperatura, 5000);
+    const interval = setInterval(fetchTemperatura, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -38,7 +38,7 @@ const Temperatura = () => {
         />
 
         {valor !== null ? (
-          <span className="temperatura-dados">{valor}</span>
+          <span className="temperatura-dados">{valor}<span className="temperatura-unidadeDeMedida">°C</span></span>
         ) : (
           <span className="temperatura-dados-carregando">Carregando...</span>
         )}
