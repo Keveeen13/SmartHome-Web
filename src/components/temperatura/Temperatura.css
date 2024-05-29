@@ -45,6 +45,13 @@
   font-size: .8em;
 }
 
+.temperatura-unidadeDeMedida {
+  margin-left: 5%;
+  padding-top: 2%;
+  font-size: .8em;
+  font-weight: 600;
+}
+
 .temperatura-dados-carregando {
   display: flex;
   align-items: center;

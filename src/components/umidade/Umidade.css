@@ -45,6 +45,13 @@
   font-size: .8em;
 }
 
+.umidade-unidadeDeMedida {
+  margin-left: 5%;
+  padding-top: 2%;
+  font-size: .8em;
+  font-weight: 600;
+}
+
 .umidade-dados-carregando {
   display: flex;
   align-items: center;
