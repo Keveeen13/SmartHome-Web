@@ -1,0 +1,167 @@
+.porta {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  grid-column: span 2;
+}
+
+.btnPorta {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 92%;
+  height: 15vmin;
+  box-shadow: 0px .5vmin 2vmin #818181;
+  border-radius: 2vmin;
+  margin: 10px;
+}
+
+.btnPorta-indisponivel:hover {
+  filter: grayscale(100%);
+  transition: .5s;
+}
+
+.btnPorta-display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.btnPorta-nome {
+  width: 100%;
+  height: auto;
+  font-size: 1.6vmin;
+  font-weight: 600;
+  padding: 5% 5% 0% 5%;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.btnPorta-ambiente {
+  width: 100%;
+  height: auto;
+  font-size: 1.6vmin;
+  font-weight: 600;
+  padding: 10% 10% 0 10%;
+  text-align: left;
+  word-wrap: break-word;
+  display: none;
+}
+
+
+.btnPorta-icone {
+  width: 13%;
+  height: auto;
+  margin: 5% 0 0 5%;
+  padding: 2%;
+  border-radius: 100%;
+}
+
+.btnDeslizante-porta {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 5% 0;
+}
+
+.btnPorta-estado {
+  align-items: center;
+  font-size: 1.6vmin;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.btnDeslizante-porta .retangulo {
+  display: flex;
+  align-items: center;
+  width: 14%;
+  height: 150%;
+  border-radius: calc(50vw * 0.05);
+  position: relative;
+  transition: 1s all;
+  margin: 2% 5%;
+}
+
+.btnDeslizante-porta .circulo {
+  width: 1.8vmin;
+  height: 1.8vmin;
+  border-radius:calc(50vw * 0.05);
+  position: absolute;
+  transition: .5s all;
+}
+
+.btnPorta-aberta {
+  background: linear-gradient(0.4turn, #33394D, #00ff2a);
+  color: #ffffff;
+  transition: all 1s;
+}
+
+.btnPorta-aberta .btnPorta-icone {
+  background-color: #000000;
+}
+
+.btnPorta-aberta .retangulo {
+  border: #FF8A00 solid 1px;
+  justify-content: right;
+}
+
+.btnPorta-aberta .retangulo .circulo{
+  background-color: #FF8A00;
+  left: calc(100% - 2vmin);
+}
+
+.btnPorta-fechada {
+  background: linear-gradient(0.4turn, #33394D, #1100ff);
+  color: #ffffff;
+  transition: all 1s;
+}
+
+.btnPorta-fechada .btnPorta-icone {
+  background-color: #000000;
+}
+
+.btnPorta-fechada .retangulo {
+  background-color: #000000;
+  border: #000000 solid 1px;
+  justify-content: left;
+}
+
+.btnPorta-fechada .retangulo .circulo{
+  background-color: #ffffff;
+  left: 2px;
+}
+
+.btnPorta-aberta .iconeIndisponivel, .btnPorta-fechada .iconeIndisponivel {
+  display: none;
+}
+
+.btnPorta-indisponivel .btnDeslizante {
+  display: none;
+}
+
+.btnPorta-indisponivel {
+  background: linear-gradient(0.4turn, #ffffff, #ff0000);
+  color: #ffffff;
+}
+
+.btnPorta-indisponivel .iconeIndisponivel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btnPorta-indisponivel .btnPorta-icone {
+  background-color: #fa9e9e;
+}
+
+.iconeIndisponivel .btnPorta-icone{
+  background-color: #ff0000;
+  width: 8%;
+  height: auto;
+  margin: 0 8%;
+  padding: 1%;
+}
