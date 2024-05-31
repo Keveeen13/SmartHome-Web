@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Luz from "../components/luz/Luz";
+import Porta from "../components/porta/Porta";
 import Temperatura from "../components/temperatura/Temperatura";
 import Umidade from "../components/umidade/Umidade";
 import GasEfumaca from "@/components/gásEfumaça/GasEfumaca";
@@ -24,9 +25,10 @@ const Home = () => {
 
       <div className="section-ambientes">
 
-      <div>
+        <div>
           <h2 className="titulo-ambiente">Térreo</h2>
           <div className="section-terreo">
+            <Porta dispositivo={"porta"} alias={"Porta"} />
             <Luz dispositivo={"luz-cantina"} alias={"Cantina"} />
             <Luz dispositivo={"luz-andar00-sala01"} alias={"Sala 1"} />
             <Luz dispositivo={"luz-andar00-sala02"} alias={"Sala 2"} />
