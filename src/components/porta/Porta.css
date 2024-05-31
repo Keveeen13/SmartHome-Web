@@ -155,7 +155,7 @@
 }
 
 .btnPorta-indisponivel .btnPorta-icone {
-  background-color: #fa9e9e;
+  background-color: #000000;
 }
 
 .iconeIndisponivel .btnPorta-icone{
@@ -164,4 +164,5 @@
   height: auto;
   margin: 0 8%;
   padding: 1%;
+  display: none;
 }
